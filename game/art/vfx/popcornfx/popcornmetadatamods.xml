@@ -1,0 +1,13 @@
+<pkmetamods>
+    <pkfx filename="particles\EnergySwordBlade.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\EnergySwordFlash.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\EnergySwordSlash.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\EnergySwordBladeOneSecond.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaGrenadeExplosion.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaGrenadeSelfDestruct.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaGrenadeFlame.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaRifleBeamVersion.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaRifleGlow.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaRifleMuzzleFlash.pkfx" type="onlywhenvisible"></pkfx>
+    <pkfx filename="particles\PlasmaRifleProjectile.pkfx" type="onlywhenvisible"></pkfx>
+</pkmetamods>

@@ -1,0 +1,132 @@
+{
+    "entities": [{
+            "type": "popcorn",
+            "local_transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0],
+            "probability": 1.0,
+            "seed": 0,
+            "passive_rotation": [0.0, 0.0, 0.0],
+            "enable_lod": false,
+            "maintain_terrain_height": false,
+            "maintain_terrain_orientation": false,
+            "is_ghost": false,
+            "deathbehaviour": "Default",
+            "pkfx": "PlasmaGrenadeSelfDestruct.pkfx"
+        }, {
+            "type": "decal",
+            "local_transform": [3.0, 0.0, 0.0, 0.0,     0.0, 3.0, 0.0, 0.0,     0.0, 0.0, 3.0, 0.0],
+            "probability": 1.0,
+            "seed": 0,
+            "passive_rotation": [0.0, 0.0, 0.0],
+            "enable_lod": false,
+            "maintain_terrain_height": false,
+            "maintain_terrain_orientation": false,
+            "is_ghost": false,
+            "deathbehaviour": "Default",
+            "edge_fade": 0.10000000149011612,
+            "bounds_fade": 0.5,
+            "normal_fade": 0.5,
+            "alpha_cutout": 0.0,
+            "sort_index": 0,
+            "texture_scale_x": 0.5,
+            "texture_scale_y": 0.5,
+            "texture_offset_x": 0.5,
+            "texture_offset_y": -0.5,
+            "texture_animation_offset_x": 0.0,
+            "texture_animation_offset_y": 0.0,
+            "basecolor_tex": "vfx\\textures\\decals\\plasma_scorch_basecolour",
+            "normal_tex": "vfx\\textures\\decals\\plasma_scorch_normal",
+            "masks_tex": "vfx\\textures\\decals\\plasma_scorch_masks",
+            "emissive_tex": "vfx\\textures\\decals\\plasma_scorch_embers",
+            "unscaled_alpha_mask": "vfx\\textures\\decals\\alpha\\square_04",
+            "emissive_intensity": 0.0,
+            "emissive_color": [1.0, 1.0, 1.0],
+            "mask_mode": "buildings_and_terrain"
+        }, {
+            "type": "decal",
+            "local_transform": [1.5, 0.0, 0.0, 0.0,     0.0, 1.5, 0.0, 0.0,     0.0, 0.0, 1.5, 0.0],
+            "probability": 1.0,
+            "seed": 0,
+            "passive_rotation": [0.0, 0.0, 0.0],
+            "enable_lod": false,
+            "maintain_terrain_height": false,
+            "maintain_terrain_orientation": false,
+            "is_ghost": false,
+            "deathbehaviour": "Default",
+            "edge_fade": 0.10000000149011612,
+            "bounds_fade": 0.5,
+            "normal_fade": 0.5,
+            "alpha_cutout": 0.0,
+            "sort_index": 0,
+            "texture_scale_x": 0.5,
+            "texture_scale_y": 0.5,
+            "texture_offset_x": 0.5,
+            "texture_offset_y": -0.5,
+            "texture_animation_offset_x": 0.0,
+            "texture_animation_offset_y": 0.0,
+            "basecolor_tex": "vfx\\textures\\decals\\plasma_scorch_embers",
+            "normal_tex": "vfx\\textures\\decals\\plasma_scorch_normal",
+            "masks_tex": "vfx\\textures\\decals\\plasma_scorch_masks",
+            "emissive_tex": "vfx\\textures\\decals\\plasma_scorch_embers",
+            "unscaled_alpha_mask": "vfx\\textures\\decals\\alpha\\square_04",
+            "emissive_intensity": 2.0,
+            "emissive_color": [1.0, 1.0, 1.0],
+            "mask_mode": "buildings_and_terrain"
+        }],
+    "events": [{
+            "trigger": "OnSpawn",
+            "action": "FadeOutAllDecals",
+            "duration": 0.0,
+            "nextcustom": "Wait"
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "Wait",
+            "action": "WaitForTime",
+            "duration": 2.0,
+            "nextcustom": "Start"
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "Wait",
+            "action": "PlaySoundSet",
+            "actionproperty": "PlasmaGrenadeArmed",
+            "duration": 0.0
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "Wait",
+            "action": "WaitForTime",
+            "duration": 1.0,
+            "nextcustom": "DetonationStartSound"
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "DetonationStartSound",
+            "action": "PlaySoundSet",
+            "actionproperty": "PlasmaGrenadeDetonationStart",
+            "duration": 0.0
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "Start",
+            "action": "FadeInAllDecals",
+            "duration": 0.25,
+            "nextcustom": "Hold"
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "Start",
+            "action": "PlaySoundSet",
+            "actionproperty": "PlasmaGrenadeExplosion",
+            "duration": 0.0
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "Hold",
+            "action": "WaitForTime",
+            "duration": 5.0,
+            "nextcustom": "End"
+        }, {
+            "trigger": "OnCustom",
+            "triggername": "End",
+            "action": "FadeOutAllDecals",
+            "duration": 2.5
+        }],
+    "destructionsharedsettings": {
+        "ignorefordestruction": false
+    },
+    "globalsettings": {}
+}

@@ -1,0 +1,173 @@
+<animfile>
+	<attachment>Weapon<include>spc\units\zealot\energy_sword.xml</include>
+	</attachment>
+
+	<attachment>Handle<include>spc\units\zealot\energy_sword_handle.xml</include>
+	</attachment>
+
+	<attachment>Grenade<include>spc\units\zealot\plasma_grenade.xml</include>
+	</attachment>
+
+	<attachment>EnergySwordBladeParticle
+		<component>VFXComp
+			<assetreference type="TMComposite">
+				<file>vfx\glow\energy_sword_blade_comp</file>
+			</assetreference>
+		</component>
+		<anim>Idle<component>VFXComp</component>
+		</anim>
+	</attachment>
+
+	<component>ModelComp
+        <assetreference type="TMModel">
+            <file>spc\units\zealot\zealot</file>
+        </assetreference>
+	</component>
+
+	<anim>Bored
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_bored_patrol_a</file>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_bored_patrol_b</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Death
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_dead</file>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EliteDeath">0.15</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Birth
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_ready_a</file>
+			<tag type="particles" popcornfxname="EnergySwordFlash.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.478</tag>
+			<tag type="particles" popcornfxname="EnergySwordBlade.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.478</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordActivate">0.478</tag>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_ready_b</file>
+			<tag type="particles" popcornfxname="EnergySwordFlash.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.359</tag>
+			<tag type="particles" popcornfxname="EnergySwordBlade.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.359</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordActivate">0.359</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Handle" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Idle
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_idle</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Walk_Slow
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_walk</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Walk
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_run</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Berserk
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_berserk</file>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EliteBerserk">0.4</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>HandAttack
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_attack_a</file>
+            <tag type="Attack">0.276</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordSlash">0.2</tag>
+			<tag type="particles" popcornfxname="EnergySwordSlash.pkfx" bone="weapon_r" movewithbone="true" stopwithanim="true" adjustduration="true">0.18</tag>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_attack_b</file>
+            <tag type="Attack">0.428</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordSlash">0.35</tag>
+			<tag type="particles" popcornfxname="EnergySwordSlash.pkfx" bone="weapon_r" movewithbone="true" stopwithanim="true" adjustduration="true">0.35</tag>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_attack_c</file>
+            <tag type="Attack">0.220</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordSlash">0.12</tag>
+			<tag type="particles" popcornfxname="EnergySwordSlash.pkfx" bone="weapon_r" movewithbone="true" stopwithanim="true" adjustduration="true">0.17</tag>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_attack_d</file>
+            <tag type="Attack">0.189</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordSlash">0.1</tag>
+			<tag type="particles" popcornfxname="EnergySwordSlash.pkfx" bone="weapon_r" movewithbone="true" stopwithanim="true" adjustduration="true">0.05</tag>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_attack_e</file>
+            <tag type="Attack">0.202</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordSlash">0.1</tag>
+			<tag type="particles" popcornfxname="EnergySwordSlash.pkfx" bone="weapon_r" movewithbone="true" stopwithanim="true" adjustduration="true">0.1</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+    <anim>Throw
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_grenade_throw</file>
+			<tag type="Attack">0.433</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+		<attach name="Grenade" attachpoint="weapon_l"></attach>
+	</anim>
+
+	<anim>Gore
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_kick</file>
+			<tag type="Attack">0.22</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>DashStart
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_dash_begin</file>
+			<tag type="Throw">0.9</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>DashEnd
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_sword_dash_end</file>
+			<tag type="Attack">0.1</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+</animfile>

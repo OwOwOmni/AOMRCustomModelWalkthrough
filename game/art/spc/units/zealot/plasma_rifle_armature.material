@@ -1,0 +1,32 @@
+<material>
+	<submaterial name="PlasmaRifle">
+		<materialdef name="opaque_lit"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\plasma_rifle_diffuse_atlas"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\plasma_rifle_normal_atlas"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\plasma_rifle_ORM_atlas"></texture>
+			<texture name="Emissive Texture" override="spc\units\zealot\textures\ddt\plasma_rifle_emission_mask_atlas"></texture>
+			<texture name="Emissive Crawling Texture" override="spc\units\zealot\textures\ddt\emissive_crawl_plasmarifle"></texture>
+			<float name="Alpha Cutout Threshold" override="0.0100"></float>
+			<float name="Emissive Crawling Speed" override="0.0"></float>
+			<float name="Emissive Intensity" override="15.0"></float>
+			<float name="Emissive Crawling UV Scale" override="1.0090"></float>
+		</parameters>
+		<permutations variant="0">
+			<permutation>ALPHA_CUT_OUT</permutation>
+			<permutation>EMISSIVE</permutation>
+		</permutations>
+	</submaterial>
+</material>
+
+<!--
+Elite_GlowLights
+Elite_GlowStrips
+Elite_Base
+Zealot_Armor
+Elite_Head
+
+EnergySwordHandle
+PlasmaRifle
+PlasmaGrenade
+-->

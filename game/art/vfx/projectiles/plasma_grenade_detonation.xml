@@ -1,0 +1,9 @@
+<animfile>
+    <component>PlasmaGrenadeDetonation
+        <assetreference type="TMComposite">
+            <file>vfx\projectiles\plasma_grenade_detonation_vfx</file>
+        </assetreference>
+    </component>
+    <anim>Idle<component>PlasmaGrenadeDetonation</component>
+    </anim>
+</animfile>

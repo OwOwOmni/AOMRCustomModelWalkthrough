@@ -1,0 +1,446 @@
+<protomods>
+    <unit name="ZealotRifle">
+		<displaynameid>STR_UNIT_ZEALOT</displaynameid>
+		<rollovertextid>STR_UNIT_ZEALOT</rollovertextid>
+		<shortrollovertextid>STR_UNIT_ZEALOT</shortrollovertextid>
+		<icon>resources\spc\player_color\units\zealot_rifle.png</icon>
+		<animfile>spc\units\zealot\zealot.xml</animfile>
+		<soundsetfile>spc\units\zealot\zealot.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>Armoured</impacttype>
+		<unitaitype>RangedCombative</unitaitype>
+		<autoattackrange>18.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<initialshieldpoints>250.0000</initialshieldpoints>
+		<maxshieldpoints>250.0000</maxshieldpoints>
+		<unitshieldregen damagetimeout="10.0">25.0000</unitshieldregen>
+		<bloodgroupoverride>mythbloodpurple</bloodgroupoverride>
+		<trainpoints>15.0000</trainpoints>
+		<weightclass>4</weightclass>
+		<populationcount>2</populationcount>
+		<maxvelocity>4.0000</maxvelocity>
+		<los>30.0000</los>
+		<rechargetime>30.0000</rechargetime>
+		<auxrechargetime>15.0000</auxrechargetime>
+		<cost resourcetype="Wood">1000.0000</cost>
+		<cost resourcetype="Gold">500.0000</cost>
+		<armor type="Hack" value="0.9000"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<unittype>HumanSoldier</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<unittype>LogicalTypeValidEidolon</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CommonCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>HasContinuousParticles</flag>
+		<flag>NeverCountDeathAsLoss</flag>
+		<flag>NoAutoDelayedTransform</flag> <!-- otherwise will immediately transform after literally any action -->
+		<bonescalemodify>0.001</bonescalemodify>
+		<tactics>zealot_plasma_rifle.tactics</tactics>
+		<protoaction>
+			<name>ChargedModify</name>
+			<type>ChargedModify</type>
+			<persistent>1</persistent>
+			<!-- seems these get evaluated in order, so put the condition that can become false last if there is one -->
+			<charged>
+				<activationtype>BelowHitpointsThreshold</activationtype>
+				<HitpointsRatioThreshold>0.5000</HitpointsRatioThreshold>
+				<settactic>SwitchToSword</settactic>
+				<duration>1.0</duration>
+				<cooldown>0.01</cooldown>
+			</charged>
+		</protoaction>
+		<protoaction>
+			<name>PlasmaVolleyA</name>
+			<!-- 3 shots -->
+			<rof>1.000000</rof>
+			<damage type="Divine">10.00000</damage>
+			<minrange>1.000000</minrange>
+			<maxrange>30.000000</maxrange>
+			<numberbounces>1</numberbounces>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+			<launchpoint>LaunchPoint</launchpoint>
+		</protoaction>
+		<protoaction>
+			<name>PlasmaVolleyB</name>
+			<!-- 4 shots -->
+			<rof>1.200000</rof>
+			<damage type="Divine">10.00000</damage>
+			<minrange>1.000000</minrange>
+			<maxrange>30.000000</maxrange>
+			<numberbounces>1</numberbounces>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+			<launchpoint>LaunchPoint</launchpoint>
+		</protoaction>
+		<protoaction>
+			<name>PlasmaVolleyC</name>
+			<!-- 8 shots -->
+			<rof>1.500000</rof>
+			<damage type="Divine">10.00000</damage>
+			<minrange>1.000000</minrange>
+			<maxrange>30.000000</maxrange>
+			<numberbounces>1</numberbounces>
+			<autoretarget>1</autoretarget>
+			<canattackground>1</canattackground>
+			<launchpoint>LaunchPoint</launchpoint>
+		</protoaction>
+		<protoaction>
+			<name>PlasmaGrenade</name>
+			<rof>2.000000</rof>
+			<damage type="Divine">1.000000</damage>
+			<maxrange>30.000000</maxrange>
+			<projectile>PlasmaGrenade</projectile>
+			<!-- <onhiteffect type="Attach" proto="PlasmaGrenadeStickyBomb" attachbone="spine" duration="2.000000">
+				<target attacktype="Unit"></target>
+			</onhiteffect> -->
+			<launchpoint>ChargeAttackLaunchPoint</launchpoint>
+		</protoaction>
+		<protoaction>
+			<name>DelayedTransform</name>
+			<type>DelayedTransform</type>
+			<modifyprotoid>ZealotEnergySword</modifyprotoid>
+			<modifyduration>4000</modifyduration>
+			<anim>Berserk</anim>
+			<transformskipplacementpush>1</transformskipplacementpush>
+			<mustfinishanimation>1</mustfinishanimation>
+			<maxrange>30.000000</maxrange>
+		</protoaction>
+		<protoaction>
+			<name>Gore</name>
+			<rof>0.750000</rof>
+			<damage type="Hack">1000.000000</damage>
+			<damageflags>Enemy</damageflags>
+			<maxrange>1.000000</maxrange>
+			<maxsizeclass>6</maxsizeclass>
+			<damagearea>3.000000</damagearea>
+			<coneareaangle>120.000000</coneareaangle>
+			<fulldamagemaintarget>1</fulldamagemaintarget>
+		</protoaction>
+	</unit>
+
+	<unit name="ZealotEnergySword">
+		<displaynameid>STR_UNIT_ZEALOT</displaynameid>
+		<rollovertextid>STR_UNIT_ZEALOT</rollovertextid>
+		<shortrollovertextid>STR_UNIT_ZEALOT</shortrollovertextid>
+		<icon>resources\spc\player_color\units\zealot_sword.png</icon>
+		<animfile>spc\units\zealot\zealot_sword.xml</animfile>
+		<soundsetfile>spc\units\zealot\zealot.xml</soundsetfile>
+		<obstructionradiusx>0.4900</obstructionradiusx>
+		<obstructionradiusz>0.4900</obstructionradiusz>
+		<impacttype>UnarmArmouredoured</impacttype>
+		<unitaitype>HandCombative</unitaitype>
+		<autoattackrange>18.0000</autoattackrange>
+		<movementtype>land</movementtype>
+		<turnrate>18.0000</turnrate>
+		<initialhitpoints>750.0000</initialhitpoints>
+		<maxhitpoints>750.0000</maxhitpoints>
+		<initialshieldpoints>250.0000</initialshieldpoints>
+		<maxshieldpoints>250.0000</maxshieldpoints>
+		<unitshieldregen damagetimeout="10.0">25.0000</unitshieldregen>
+		<trainpoints>15.0000</trainpoints>
+		<weightclass>4</weightclass>
+		<populationcount>2</populationcount>
+		<maxvelocity>7.0000</maxvelocity>
+		<los>30.0000</los>
+		<bloodgroupoverride>mythbloodpurple</bloodgroupoverride>
+		<rechargetime>30.0000</rechargetime>
+		<auxrechargetime>15.0000</auxrechargetime>
+		<cost resourcetype="Wood">1000.0000</cost>
+		<cost resourcetype="Gold">500.0000</cost>
+		<armor type="Hack" value="0.9000"></armor>
+		<armor type="Pierce" value="0.9000"></armor>
+		<armor type="Crush" value="0.9900"></armor>
+		<unittype>LogicalTypeNeededForVictory</unittype>
+		<unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeLandMilitary</unittype>
+		<unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+		<unittype>LogicalTypeGarrisonInShips</unittype>
+		<unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+		<unittype>LogicalTypeVillagersAttack</unittype>
+		<unittype>LogicalTypeHandUnitsAttack</unittype>
+		<unittype>LogicalTypeRangedUnitsAttack</unittype>
+		<unittype>LogicalTypeMinimapFilterMilitary</unittype>
+		<unittype>LogicalTypeValidBoltTarget</unittype>
+		<unittype>LogicalTypeAffectedByRestoration</unittype>
+		<unittype>LogicalTypeHealed</unittype>
+		<unittype>CountsTowardMilitaryScore</unittype>
+		<unittype>MilitaryUnit</unittype>
+		<unittype>UnitClass</unittype>
+		<unittype>Unit</unittype>
+		<unittype>Ranged</unittype>
+		<unittype>AbstractArcher</unittype>
+		<unittype>ArcherLineUpgraded</unittype>
+		<unittype>HumanSoldier</unittype>
+		<unittype>LogicalTypeConvertsHerds</unittype>
+		<unittype>LogicalTypeEarthquakeAttack</unittype>
+		<unittype>LogicalTypeValidMeteorTarget</unittype>
+		<unittype>LogicalTypeValidTornadoAttack</unittype>
+		<unittype>LogicalTypeValidShiftingSandsTarget</unittype>
+		<unittype>LogicalTypeParticipatesInBattlecries</unittype>
+		<unittype>LogicalTypeValidFrostTarget</unittype>
+		<unittype>LogicalTypeValidSpyTarget</unittype>
+		<unittype>LogicalTypeValidTraitorTarget</unittype>
+		<unittype>LogicalTypeValidShockwaveTarget</unittype>
+		<unittype>LogicalTypeAffectedBySunRay</unittype>
+		<unittype>LogicalTypeValidEidolon</unittype>
+		<flag>CollidesWithProjectiles</flag>
+		<flag>CorpseDecays</flag>
+		<flag>ShowGarrisonButton</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>ObscuredByUnits</flag>
+		<flag>MilitaryCommands</flag>
+		<flag>CommonCommands</flag>
+		<flag>CreateUnitGroupAutomatically</flag>
+		<flag>NoAutoDelayedTransform</flag>
+		<flag>HasContinuousParticles</flag>
+		<bonescalemodify>0.001</bonescalemodify>
+		<tactics>zealot_sword.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.000000</rof>
+			<damage type="Divine">150.000000</damage>
+			<damagearea>2.000000</damagearea>
+			<maxrange>2.000000</maxrange>
+			<onhiteffect type="Lifesteal" rate="0.25" targetunittype="Unit"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>PlasmaGrenade</name>
+			<rof>2.000000</rof>
+			<damage type="Divine">1.000000</damage>
+			<maxrange>30.000000</maxrange>
+			<projectile>PlasmaGrenade</projectile>
+			<!-- <onhiteffect type="Attach" proto="PlasmaGrenadeStickyBomb" attachbone="spine" duration="2.000000">
+				<target attacktype="Unit"></target>
+			</onhiteffect> -->
+			<launchpoint>ChargeAttackLaunchPoint</launchpoint>
+		</protoaction>
+		<protoaction>
+			<name>TeleportAttack</name>
+			<rof>0.500000</rof>
+			<damage type="Divine">150.000000</damage>
+			<damagearea>2.000000</damagearea>
+			<damageflags>Nature|Enemy</damageflags>
+			<maxrange>15.000000</maxrange>
+			<modifyduration>500</modifyduration>
+			<projectile>ProjectileBallOfFireInvisibleGigaSpeed</projectile>
+			<onhiteffect type="Lifesteal" rate="1.0" targetunittype="Unit"></onhiteffect>
+		</protoaction>
+		<protoaction>
+			<name>DelayedTransform</name>
+			<type>DelayedTransform</type>
+			<modifyprotoid>ZealotRifle</modifyprotoid>
+			<modifyduration>4000</modifyduration>
+			<anim>Berserk</anim>
+			<transformskipplacementpush>1</transformskipplacementpush>
+			<mustfinishanimation>1</mustfinishanimation>
+			<maxrange>30.000000</maxrange>
+		</protoaction>
+	</unit>
+
+	<unit name="ProjectilePlasmaBolt">
+		<animfile>spc\units\zealot\plasma_rifle_bolt.xml</animfile>
+		<obstructionradiusx>0.2000</obstructionradiusx>
+		<obstructionradiusz>0.2000</obstructionradiusz>
+		<lifespan>2.0000</lifespan>
+		<decay delay="4.0000" duration="0.1000"></decay>
+		<movementtype>air</movementtype>
+		<maxvelocity>60.0000</maxvelocity>
+		<unittype>Projectile</unittype>
+		<unittype>LogicalTypeSunRayProjectile</unittype>
+		<flag>Invulnerable</flag>
+		<flag>NoUnitAI</flag>
+		<flag>NoIdleActions</flag>
+		<flag>NonCollideable</flag>
+		<flag>NotSearchable</flag>
+		<flag>Projectile</flag>
+		<flag>NoTieToGround</flag>
+		<flag>DoNotShowOnMiniMap</flag>
+		<flag>NotSelectable</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>NoHPBar</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>AdjustPositionOnTerrainCollision</flag>
+		<flag>NotPlayerPlaceable</flag>
+		<flag>HasContinuousParticles</flag>
+		<flag>NotKBTracked</flag>
+		<flag>NotDeathTracked</flag>
+	</unit>
+
+	<unit name="PlasmaGrenade">
+		<animfile>spc\units\zealot\plasma_grenade.xml</animfile>
+		<obstructionradiusx>0.2000</obstructionradiusx>
+		<obstructionradiusz>0.2000</obstructionradiusz>
+		<spawn type="hit" count="1">PlasmaGrenadeStickyBomb</spawn>
+		<!-- <spawn type="hitGround" count="1" skipplacementcheck="">PlasmaGrenadeStickyBomb</spawn> -->
+		<lifespan>2.0000</lifespan>
+		<decay delay="4.0000" duration="0.1000"></decay>
+		<movementtype>air</movementtype>
+		<maxvelocity>30.0000</maxvelocity>
+		<unittype>Projectile</unittype>
+		<unittype>LogicalTypeSunRayProjectile</unittype>
+		<flag>Invulnerable</flag>
+		<flag>NoUnitAI</flag>
+		<flag>NoIdleActions</flag>
+		<flag>NonCollideable</flag>
+		<flag>NotSearchable</flag>
+		<flag>Projectile</flag>
+		<flag>NoTieToGround</flag>
+		<flag>DoNotShowOnMiniMap</flag>
+		<flag>NotSelectable</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>NoHPBar</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>AdjustPositionOnTerrainCollision</flag>
+		<flag>NotPlayerPlaceable</flag>
+		<flag>HasContinuousParticles</flag>
+		<flag>NotKBTracked</flag>
+		<flag>NotDeathTracked</flag>
+	</unit>
+
+	<unit name="PlasmaGrenadeStickyBomb">
+		<displaynameid>STR_VFX_ARGUS_ACID_BLOB_DAMAGE_NAME</displaynameid>
+		<animfile>vfx\projectiles\plasma_grenade_detonation.xml</animfile>
+		<obstructionradiusx>0.4000</obstructionradiusx>
+		<obstructionradiusz>0.4000</obstructionradiusz>
+		<lifespan>2.0000</lifespan>
+		<decay delay="0.0000" duration="0.5000"></decay>
+		<movementtype>land</movementtype>
+		<unittype>Unit</unittype>
+		<flag>Invulnerable</flag>
+		<flag>NonCollideable</flag>
+		<flag>NotSearchable</flag>
+		<flag>DoNotShowOnMiniMap</flag>
+		<flag>NotSelectable</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>NoHPBar</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>NoIdleActions</flag>
+		<flag>AreaDamageConstant</flag>
+		<flag>NotKBTracked</flag>
+		<flag>NotDeathTracked</flag>
+		<flag>BallisticTrackSource</flag>
+		<selfdestructprotoaction>SelfDestructAttack</selfdestructprotoaction>
+		<tactics>area_damage.tactics</tactics>
+		<protoaction>
+			<name>AreaDamage</name>
+			<modifyamount>0</modifyamount>
+			<modifydamagetype>Divine</modifydamagetype>
+			<maxrange>3.5</maxrange>
+			<sendunderattackevent>1</sendunderattackevent>
+			<targetenemy>1</targetenemy>
+		</protoaction>
+		<protoaction>
+			<name>SelfDestructAttack</name>
+			<type>Attack</type>
+			<damage type="Divine">500.000000</damage>
+			<damagearea>5.000000</damagearea>
+			<damageflags>Nature|Enemy</damageflags>
+			<attackaction>1</attackaction>
+			<rate type="All">1.0</rate>
+			<areasortmode>Radial</areasortmode>
+			<impacteffect>effects\impacts\pierce</impacteffect>
+		</protoaction>
+	</unit>
+
+	<unit name="ProjectilePlasmaBoltBeam">
+		<animfile>vfx\projectiles\plasma_rifle_bolt_beam.xml</animfile>
+		<obstructionradiusx>0.2000</obstructionradiusx>
+		<obstructionradiusz>0.2000</obstructionradiusz>
+		<lifespan>6.0000</lifespan>
+		<decay delay="0.0000" duration="0.0100"></decay>
+		<movementtype>air</movementtype>
+		<unittype>Projectile</unittype>
+		<flag>NotSelectable</flag>
+		<flag>NotSearchable</flag>
+		<flag>KillOnAnimLoop</flag>
+		<flag>DoNotYawDuringMovement</flag>
+		<flag>NonCollideable</flag>
+		<flag>GivesLOSToAll</flag>
+		<flag>NoHPBar</flag>
+		<flag>NotPlayerPlaceable</flag>
+		<flag>NoIdleActions</flag>
+		<flag>NotKBTracked</flag>
+		<flag>NotDeathTracked</flag>
+		<tactics>handattack.tactics</tactics>
+		<protoaction>
+			<name>HandAttack</name>
+			<rof>1.0</rof>
+			<damage type="Hack">25</damage>
+			<maxrange>0.300000</maxrange>
+		</protoaction>
+	</unit>
+
+	<unit name="ProjectileBallOfFireInvisibleGigaSpeed">
+		<animfile>vfx\projectiles\ball_of_fire_invisible\ball_of_fire_invisible.xml</animfile>
+		<obstructionradiusx>0.2000</obstructionradiusx>
+		<obstructionradiusz>0.2000</obstructionradiusz>
+		<lifespan>2.0000</lifespan>
+		<decay delay="4.0000" duration="0.1000"></decay>
+		<movementtype>air</movementtype>
+		<maxvelocity>200.0000</maxvelocity>
+		<unittype>Projectile</unittype>
+		<unittype>LogicalTypeSunRayProjectile</unittype>
+		<flag>Invulnerable</flag>
+		<flag>NoUnitAI</flag>
+		<flag>NoIdleActions</flag>
+		<flag>NonCollideable</flag>
+		<flag>NotSearchable</flag>
+		<flag>Projectile</flag>
+		<flag>NoTieToGround</flag>
+		<flag>DoNotShowOnMiniMap</flag>
+		<flag>NotSelectable</flag>
+		<flag>DoNotDieAtZeroHitpoints</flag>
+		<flag>NoHPBar</flag>
+		<flag>NonAutoFormedUnit</flag>
+		<flag>DontRotateObstruction</flag>
+		<flag>AdjustPositionOnTerrainCollision</flag>
+		<flag>NotPlayerPlaceable</flag>
+		<flag>NotKBTracked</flag>
+		<flag>NotDeathTracked</flag>
+	</unit>
+</protomods>

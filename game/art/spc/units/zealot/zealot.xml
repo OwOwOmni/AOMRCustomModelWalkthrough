@@ -1,0 +1,183 @@
+<animfile>
+	<attachment>Weapon<include>spc\units\zealot\plasma_rifle.xml</include>
+	</attachment>
+
+	<attachment>Grenade<include>spc\units\zealot\plasma_grenade.xml</include>
+	</attachment>
+
+	<attachment>Handle<include>spc\units\zealot\energy_sword_handle.xml</include>
+	</attachment>
+
+	<component>ModelComp
+        <assetreference type="TMModel">
+            <file>spc\units\zealot\zealot</file>
+        </assetreference>
+	</component>
+
+	<anim>Bored
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_bored_patrol_a</file>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_bored_patrol_b</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Death
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_dead</file> 
+			<tag type="SpecificSoundSet" checkvisible="1" set="EliteDeath">0.15</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Idle
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_idle_patrol</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>Walk
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_walk</file>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<!-- <anim>Berserk
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_berserk</file>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EliteBerserk">0.4</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim> -->
+
+	<anim>Berserk
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_berserk_into_sword_a</file>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EliteBerserk">0.15</tag>
+			<tag type="particles" popcornfxname="EnergySwordFlash.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.74</tag>
+			<tag type="particles" popcornfxname="EnergySwordBlade.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.74</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordActivate">0.74</tag>
+		</assetreference>
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_berserk_into_sword_b</file>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EliteBerserk">0.15</tag>
+			<tag type="particles" popcornfxname="EnergySwordFlash.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.70</tag>
+			<tag type="particles" popcornfxname="EnergySwordBlade.pkfx" bone="weapon_r_vfx" 
+			movewithbone="true" stopwithanim="true" adjustduration="true">0.70</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="EnergySwordActivate">0.70</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Handle" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>RangedAttackFast
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_shoot_1x</file>
+            <tag type="Attack">0.412</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.412</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.412</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+    <anim>RangedAttack
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_shoot_3x</file>
+            <tag type="Attack">0.367</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.367</tag>
+            <tag type="Attack">0.529</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.529</tag>
+            <tag type="Attack">0.659</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.659</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.367</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.529</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.659</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>RangedAttackB
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_shoot_4x</file>
+            <tag type="Attack">0.272</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.272</tag>
+            <tag type="Attack">0.426</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.426</tag>
+            <tag type="Attack">0.569</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.569</tag>
+			<tag type="Attack">0.712</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.712</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.272</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.426</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.569</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.712</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+	<anim>RangedAttackC
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_shoot_8x</file>
+            <tag type="Attack">0.203</tag>
+            <tag type="Attack">0.309</tag>
+            <tag type="Attack">0.389</tag>
+			<tag type="Attack">0.466</tag>
+			<tag type="Attack">0.546</tag>
+			<tag type="Attack">0.629</tag>
+			<tag type="Attack">0.711</tag>
+			<tag type="Attack">0.798</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.203</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.309</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.389</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.466</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.546</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.629</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.711</tag>
+			<tag type="particles" popcornfxname="PlasmaRifleMuzzleFlash.pkfx" bone="vfx_muzzle" movewithbone="false" stopwithanim="true" adjustduration="true">0.798</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.203</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.309</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.389</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.466</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.546</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.629</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.711</tag>
+			<tag type="SpecificSoundSet" checkvisible="1" set="PlasmaRifleShoot">0.798</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+
+    <anim>Throw
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_grenade_throw</file>
+			<tag type="Attack">0.54</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+		<attach name="Grenade" attachpoint="weapon_l"></attach>
+	</anim>
+
+	<anim>Gore
+		<assetreference type="TMAnimation">
+			<file>spc\units\zealot\anim\elite_pistol_kick</file>
+			<tag type="Attack">0.22</tag>
+		</assetreference>
+		<component>ModelComp</component>
+		<attach name="Weapon" attachpoint="weapon_r"></attach>
+	</anim>
+</animfile>

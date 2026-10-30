@@ -1,0 +1,95 @@
+<tactics>
+	<action>
+		<name stringid="STR_ACTION_RANGED">PlasmaVolleyA</name>
+		<type>ChainAttack</type>
+		<attackaction>1</attackaction>
+		<rangedlogic>1</rangedlogic>
+		<anim>RangedAttack</anim>
+		<accuracy>1.0</accuracy>
+		<projectile>ProjectilePlasmaBoltBeam</projectile>
+		<impacteffect>effects\impacts\pierce</impacteffect>
+		<rate type="All">1.0</rate>
+	</action>
+    <action>
+		<name stringid="STR_ACTION_RANGED">PlasmaVolleyB</name>
+		<type>ChainAttack</type>
+		<attackaction>1</attackaction>
+		<rangedlogic>1</rangedlogic>
+		<anim>RangedAttackB</anim>
+		<accuracy>1.0</accuracy>
+		<projectile>ProjectilePlasmaBoltBeam</projectile>
+		<impacteffect>effects\impacts\pierce</impacteffect>
+		<rate type="All">1.0</rate>
+	</action>
+    <action>
+		<name stringid="STR_ACTION_RANGED">PlasmaVolleyC</name>
+		<type>ChainAttack</type>
+		<attackaction>1</attackaction>
+		<rangedlogic>1</rangedlogic>
+		<anim>RangedAttackC</anim>
+		<auxchargeaction>1</auxchargeaction>
+		<accuracy>1.0</accuracy>
+		<projectile>ProjectilePlasmaBoltBeam</projectile>
+		<impacteffect>effects\impacts\pierce</impacteffect>
+		<rate type="All">1.0</rate>
+	</action>
+    <action>
+        <name stringid="STR_ACTION_CHARGE_RANGED">PlasmaGrenade</name>
+		<type>Attack</type>
+		<attackaction>1</attackaction>
+		<rangedlogic>1</rangedlogic>
+		<anim>Throw</anim>
+		<accuracy>1.0</accuracy>
+        <perfectaccuracy>1.0</perfectaccuracy>
+		<chargeaction>1</chargeaction>
+		<maxspread>0.0</maxspread>
+		<spreadfactor>0.75</spreadfactor>
+		<trackrating>99.0</trackrating>
+		<rate type="All">1.0</rate>
+	</action>
+	<action>
+		<name>DelayedTransform</name>
+		<type>DelayedTransform</type>
+		<anim>Berserk</anim>
+		<rate type="All">1.0</rate>
+		<attackaction>1</attackaction>
+	</action>
+	<action>
+		<name stringid="STR_ACTION_GORE">Gore</name>
+		<type>Gore</type>
+		<rate type="HumanSoldier">1.0</rate>
+		<rate type="LogicalTypeMythUnitNotTitan">1.0</rate>
+		<rate type="LogicalTypeVillagerNotHero">1.0</rate>
+		<rate type="TradeUnit">1.0</rate>
+		<attackaction>1</attackaction>
+		<handlogic>1</handlogic>
+		<anim>Gore</anim>
+		<impacteffect>effects\impacts\hack</impacteffect>
+	</action>
+	<tactic>Default
+        <action priority="90">PlasmaGrenade</action>
+        <action priority="80">PlasmaVolleyC</action>
+        <action priority="70">PlasmaVolleyB</action>
+        <action priority="60">PlasmaVolleyA</action>
+		<action priority="50">Gore</action>
+        <attacktype>LogicalTypeRangedUnitsAttack</attacktype>
+        <autoattacktype>LogicalTypeRangedUnitsAutoAttack</autoattacktype>
+        <attackresponsetype>LogicalTypeRangedUnitsAttack</attackresponsetype>
+        <attackmovetype>AbstractWall</attackmovetype>
+		<walkanim>Walk</walkanim>
+		<idleanim>Idle</idleanim>
+		<boredanim>Bored</boredanim>
+		<deathanim>Death</deathanim>
+    </tactic>
+	<tactic>SwitchToSword
+		<abilityonly>1</abilityonly>
+		<action priority="100">DelayedTransform</action>
+		<attacktype>LogicalTypeHandUnitsAttack</attacktype>
+		<autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype>
+		<attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype>
+		<walkanim>Walk</walkanim>
+		<idleanim>Idle</idleanim>
+		<boredanim>Bored</boredanim>
+		<deathanim>Death</deathanim>
+	</tactic>
+</tactics>

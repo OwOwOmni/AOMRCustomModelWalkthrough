@@ -1,0 +1,9 @@
+<animfile>
+	<component>ModelComp
+		<assetreference type="TMModel">
+			<file>spc\units\zealot\energy_sword_handle</file>
+		</assetreference>
+	</component>
+	<anim>Idle<component>ModelComp</component>
+	</anim>
+</animfile>

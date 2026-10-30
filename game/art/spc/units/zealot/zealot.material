@@ -1,0 +1,78 @@
+<material>
+	<submaterial name="Zealot_Armor">
+		<materialdef name="opaque_lit"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\elite_armor_diffuse_atlas"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\elite_armor_normal_atlas"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\elite_armor_ORM_atlas"></texture>
+		</parameters>
+	</submaterial>
+	<submaterial name="Elite_Base">
+		<materialdef name="opaque_lit"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\elite_base_diffuse_atlas"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\elite_base_normal_atlas"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\elite_base_ORM_atlas"></texture>
+		</parameters>
+	</submaterial>
+	<submaterial name="Elite_Head">
+		<materialdef name="opaque_lit"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\elite_head_diffuse_atlas"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\elite_head_normal_atlas"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\elite_head_ORM_atlas"></texture>
+		</parameters>
+	</submaterial>
+	<submaterial name="Elite_GlowLights">
+		<materialdef name="opaque_lit_doublesided"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\elite_zealot_illum_alpha"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\generic_normal"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\generic_masks"></texture>
+			<texture name="Masks2" override="spc\units\zealot\textures\ddt\elite_zealot_illum"></texture>
+			<texture name="Emissive Texture" override="spc\units\zealot\textures\ddt\elite_zealot_illum"></texture>
+			<texture name="Emissive Crawling Texture" override="spc\units\zealot\textures\emissive_crawl_white"></texture>
+			<float name="Alpha Cutout Threshold" override="0.0100"></float>
+			<float name="Emissive Crawling Speed" override="0.0"></float>
+			<float name="Emissive Intensity" override="15.0"></float>
+			<float name="Emissive Crawling UV Scale" override="1.0090"></float>
+			<float name="Player Color Threshold" override="0.1000"></float>
+		</parameters>
+		<permutations variant="0">
+			<permutation>ALPHA_CUT_OUT</permutation>
+			<permutation>EMISSIVE</permutation>
+		</permutations>
+	</submaterial>
+	<submaterial name="Elite_GlowStrips">
+		<materialdef name="opaque_lit_doublesided"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\elite_general_stripes_illum_alpha"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\generic_normal"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\generic_masks"></texture>
+			<texture name="Masks2" override="spc\units\zealot\textures\ddt\elite_general_stripes_illum"></texture>
+			<texture name="Emissive Texture" override="spc\units\zealot\textures\ddt\elite_general_stripes_illum"></texture>
+			<texture name="Emissive Crawling Texture" override="spc\units\zealot\textures\emissive_crawl_white"></texture>
+			<float name="Alpha Cutout Threshold" override="0.0100"></float>
+			<float name="Emissive Crawling Speed" override="0.0"></float>
+			<float name="Emissive Intensity" override="30.0"></float>
+			<float name="Emissive Crawling UV Scale" override="1.0090"></float>
+			<float name="Player Color Threshold" override="0.1000"></float>
+		</parameters>
+		<permutations variant="0">
+			<permutation>ALPHA_CUT_OUT</permutation>
+			<permutation>EMISSIVE</permutation>
+		</permutations>
+	</submaterial>
+</material>
+
+<!--
+Elite_GlowLights
+Elite_GlowStrips
+Elite_Base
+Zealot_Armor
+Elite_Head
+
+EnergySwordHandle
+PlasmaRifle
+PlasmaGrenade
+-->

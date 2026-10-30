@@ -1,0 +1,4 @@
+Language = "English"
+IsRtl = "False"
+
+ID = "STR_UNIT_ZEALOT"   ;  Str = "Elite Zealot"

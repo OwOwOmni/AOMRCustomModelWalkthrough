@@ -1,0 +1,26 @@
+<material>
+	<submaterial name="PlasmaGrenade">
+		<materialdef name="opaque_lit"></materialdef>
+		<parameters>
+			<texture name="BaseColor" override="spc\units\zealot\textures\ddt\grenade_diffuse_atlas"></texture>
+			<texture name="Normals" override="spc\units\zealot\textures\ddt\grenade_normal_atlas"></texture>
+			<texture name="Masks" override="spc\units\zealot\textures\ddt\grenade_ORM_atlas"></texture>
+			<float name="Alpha Cutout Threshold" override="0.0100"></float>
+		</parameters>
+		<permutations variant="0">
+			<permutation>ALPHA_CUT_OUT</permutation>
+		</permutations>
+	</submaterial>
+</material>
+
+<!--
+Elite_GlowLights
+Elite_GlowStrips
+Elite_Base
+Zealot_Armor
+Elite_Head
+
+EnergySwordHandle
+PlasmaRifle
+PlasmaGrenade
+-->

@@ -1,0 +1,87 @@
+<soundsetdef>
+    <!-- unit sounds -->
+	<soundset name="EliteAcknowledge"  volume="0.350">
+		<sound filename="elite\acknowledge\ack_a.wav"></sound>
+		<sound filename="elite\acknowledge\ack_b.wav"></sound>
+		<sound filename="elite\acknowledge\ack_c.wav"></sound>
+        <sound filename="elite\acknowledge\ack_e.wav"></sound>
+        <sound filename="elite\acknowledge\ack_f.wav"></sound>
+        <sound filename="elite\acknowledge\ack_g.wav"></sound>
+        <sound filename="elite\acknowledge\ack_h.wav"></sound>
+	</soundset>
+    <soundset name="EliteAttack"  volume="0.350">
+		<sound filename="elite\attack\atk_a.wav"></sound>
+		<sound filename="elite\attack\atk_b.wav"></sound>
+		<sound filename="elite\attack\atk_c.wav"></sound>
+        <sound filename="elite\attack\atk_e.wav"></sound>
+        <sound filename="elite\attack\atk_f.wav"></sound>
+        <sound filename="elite\attack\atk_g.wav"></sound>
+        <sound filename="elite\attack\atk_h.wav"></sound>
+        <sound filename="elite\attack\atk_i.wav"></sound>
+	</soundset>
+    <soundset name="EliteBerserk"  volume="0.350">
+		<sound filename="elite\berserk\brsk_a.wav"></sound>
+		<sound filename="elite\berserk\brsk_b.wav"></sound>
+		<sound filename="elite\berserk\brsk_c.wav"></sound>
+        <sound filename="elite\berserk\brsk_e.wav"></sound>
+        <sound filename="elite\berserk\brsk_f.wav"></sound>
+        <sound filename="elite\berserk\brsk_g.wav"></sound>
+	</soundset>
+    <soundset name="EliteDeath"  volume="0.350">
+		<sound filename="elite\death\dth_a.wav"></sound>
+		<sound filename="elite\death\dth_b.wav"></sound>
+		<sound filename="elite\death\dth_c.wav"></sound>
+        <sound filename="elite\death\dth_e.wav"></sound>
+        <sound filename="elite\death\dth_f.wav"></sound>
+        <sound filename="elite\death\dth_g.wav"></sound>
+	</soundset>
+    <soundset name="EliteHurt"  volume="0.350">
+		<sound filename="elite\hurt\hurt_a.wav"></sound>
+		<sound filename="elite\hurt\hurt_b.wav"></sound>
+		<sound filename="elite\hurt\hurt_c.wav"></sound>
+        <sound filename="elite\hurt\hurt_e.wav"></sound>
+        <sound filename="elite\hurt\hurt_f.wav"></sound>
+        <sound filename="elite\hurt\hurt_g.wav"></sound>
+	</soundset>
+    <soundset name="EliteSelect"  volume="0.350">
+		<sound filename="elite\select\select_a.wav"></sound>
+		<sound filename="elite\select\select_b.wav"></sound>
+		<sound filename="elite\select\select_c.wav"></sound>
+        <sound filename="elite\select\select_e.wav"></sound>
+        <sound filename="elite\select\select_f.wav"></sound>
+        <sound filename="elite\select\select_g.wav"></sound>
+	</soundset>
+
+    <!-- weapon sounds -->
+    <soundset name="EnergySwordActivate"  volume="0.350">
+		<sound filename="weapons\energy_sword\sword_ready.wav"></sound>
+	</soundset>
+    <soundset name="EnergySwordSlash"  volume="0.250">
+		<sound filename="weapons\energy_sword\sword_melee_1a.wav"></sound>
+        <sound filename="weapons\energy_sword\sword_melee_1b.wav"></sound>
+        <sound filename="weapons\energy_sword\sword_melee_1c.wav"></sound>
+	</soundset>
+
+    <soundset name="PlasmaGrenadeArmed"  volume="0.350">
+		<sound filename="weapons\plasma_grenade\armed_a.wav"></sound>
+        <sound filename="weapons\plasma_grenade\armed_b.wav"></sound>
+        <sound filename="weapons\plasma_grenade\armed_c.wav"></sound>
+	</soundset>
+    <soundset name="PlasmaGrenadeDetonationStart"  volume="0.350">
+		<sound filename="weapons\plasma_grenade\detonation_start1.wav"></sound>
+        <sound filename="weapons\plasma_grenade\detonation_start2.wav"></sound>
+        <sound filename="weapons\plasma_grenade\detonation_start3.wav"></sound>
+	</soundset>
+    <soundset name="PlasmaGrenadeExplosion"  volume="0.350">
+		<sound filename="weapons\plasma_grenade\plasma_expl1_new.wav"></sound>
+        <sound filename="weapons\plasma_grenade\plasma_expl2_new.wav"></sound>
+        <sound filename="weapons\plasma_grenade\plasma_expl3_new.wav"></sound>
+        <sound filename="weapons\plasma_grenade\plasma_expl4_new.wav"></sound>
+	</soundset>
+
+    <soundset name="PlasmaRifleShoot"  volume="0.250">
+		<sound filename="weapons\plasma_rifle\plas_rif_fire_reach1.wav"></sound>
+        <sound filename="weapons\plasma_rifle\plas_rif_fire_reach2.wav"></sound>
+        <sound filename="weapons\plasma_rifle\plas_rif_fire_reach3.wav"></sound>
+	</soundset>
+</soundsetdef>
